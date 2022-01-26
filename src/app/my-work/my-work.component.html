@@ -43,6 +43,47 @@
       </div>
     </div>
   </div>
+  <div class="row social-profiles">
+    <h2 #socialProfileTitle>Social profiles and CV</h2>
+    <hr #socialProfileLine />
+    <div #github class="col-md-6 col-lg-4 profile-container">
+      <img
+        src="assets/github.jpg"
+        alt="GitHub"
+        class="pointer"
+        (click)="githubLink.click()"
+      />
+      <p>
+        <a #githubLink href="https://github.com/Totoblak90" target="_blank"
+          >Check out my github profile</a
+        >
+      </p>
+    </div>
+    <div #linkedin class="col-md-6 col-lg-4 profile-container">
+      <img
+        src="assets/linkedin.png"
+        alt="LinkedIn"
+        class="pointer"
+        (click)="linkedinLink.click()"
+      />
+      <p>
+        <a #linkedinLink href="https://github.com/Totoblak90" target="_blank"
+          >Check out my linkedin profile</a
+        >
+      </p>
+    </div>
+    <div #cv class="col-md-6 col-lg-4 profile-container">
+      <img
+        src="assets/cv.png"
+        alt="Curriculum Vitae"
+        class="pointer"
+        (click)="cvLink.click()"
+      />
+      <p>
+        <a #cvLink href="assets/CV.pdf" download>Download my CV</a>
+      </p>
+    </div>
+  </div>
   <div class="row professional-experience">
     <h2 #professionalExperienceTitle>Professional experience</h2>
     <hr #professionalExperienceTitleLine />
@@ -59,9 +100,7 @@
     <h2 #catalogTitle>Catalog</h2>
     <hr #catalogTitleLine />
     <div #marken class="col-md-4">
-      <div
-        class="card bgc-secondary"
-      >
+      <div class="card bgc-secondary">
         <div class="card-header">
           <p class="card-header-title">Marken drinks</p>
           <p class="card-header-subtitle">Site still in construction</p>
@@ -76,9 +115,7 @@
       </div>
     </div>
     <div #dln class="col-md-4">
-      <div
-        class="card bgc-secondary"
-      >
+      <div class="card bgc-secondary">
         <div class="card-header">
           <p>DLN Construcciones</p>
           <p>Site still in construction</p>

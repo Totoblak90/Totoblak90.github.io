@@ -24,5 +24,21 @@
         }
       }
     }
+    &.social-profiles {
+      justify-content: space-around;
+      .profile-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        img {
+          width: 200px;
+          height: 200px;
+        }
+        a {
+          text-decoration: none;
+        }
+      }
+    }
   }
 }

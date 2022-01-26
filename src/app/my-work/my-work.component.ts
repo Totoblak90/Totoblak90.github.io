@@ -15,6 +15,13 @@ export class MyWorkComponent implements OnInit {
   @ViewChild('frontend', { static: true }) frontEnd: ElementRef<HTMLDivElement>;
   @ViewChild('backend', { static: true }) backend: ElementRef<HTMLDivElement>;
   @ViewChild('database', { static: true }) database: ElementRef<HTMLDivElement>;
+  @ViewChild('socialProfileTitle', { static: true })
+  socialProfileTitle: ElementRef<HTMLTitleElement>;
+  @ViewChild('socialProfileLine', { static: true })
+  socialProfileLine: ElementRef<HTMLHRElement>;
+  @ViewChild('github', { static: true }) github: ElementRef<HTMLDivElement>;
+  @ViewChild('linkedin', { static: true }) linkedin: ElementRef<HTMLDivElement>;
+  @ViewChild('cv', { static: true }) cv: ElementRef<HTMLDivElement>;
   @ViewChild('professionalExperienceTitle', { static: true })
   professionalExperienceTitle: ElementRef<HTMLTitleElement>;
   @ViewChild('professionalExperienceTitleLine', { static: true })
@@ -51,7 +58,7 @@ export class MyWorkComponent implements OnInit {
     )
       .from(
         [
-          this.frontEnd?.nativeElement,
+          this.frontEnd.nativeElement,
           this.backend.nativeElement,
           this.database.nativeElement,
         ],
@@ -59,6 +66,31 @@ export class MyWorkComponent implements OnInit {
           duration: 0.7,
           y: -200,
           x: -200,
+          opacity: 0,
+          stagger: 0.25,
+        }
+      )
+      .from(
+        [
+          this.socialProfileTitle.nativeElement,
+          this.socialProfileLine.nativeElement,
+        ],
+        {
+          duration: 0.5,
+          opacity: 0,
+        }
+      )
+      .from(
+        [
+          this.github.nativeElement,
+          this.linkedin.nativeElement,
+          this.cv.nativeElement,
+        ],
+
+        {
+          duration: 0.7,
+          y: -200,
+          x: 200,
           opacity: 0,
           stagger: 0.25,
         }

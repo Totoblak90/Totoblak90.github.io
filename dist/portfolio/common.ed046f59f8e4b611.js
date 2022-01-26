@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkportfolio=self.webpackChunkportfolio||[]).push([[592],{5794:(i,r,o)=>{o.d(r,{I:()=>c});var t=o(241);let c=(()=>{class e{constructor(){this.delayAnimationOnWelcomePage=2.5,this.isFirstLoad=!0}}return e.\u0275fac=function(a){return new(a||e)},e.\u0275prov=t.Yz7({token:e,factory:e.\u0275fac,providedIn:"root"}),e})()}}]);

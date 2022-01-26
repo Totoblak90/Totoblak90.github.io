@@ -1,0 +1,27 @@
+.row {
+  .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @media (max-width: 575px) {
+      align-items: center;
+    }
+  }
+  .avatar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    img {
+      border-radius: 50%;
+      width: 300px;
+      height: 300px;
+      @media (max-width: 575px) {
+        border-radius: 0%;
+        width: 100%;
+        height: auto;
+        margin-top: 10px;
+      }
+    }
+  }
+}

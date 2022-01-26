@@ -9,6 +9,7 @@
       *ngFor="let file of files; let i = index"
       (click)="openFile(file, i)"
       class="pointer"
+      #fileOpener
     >
       <mat-icon color="primary" mat-list-icon>music_note</mat-icon>
       <h4 mat-line>{{ file.name }}</h4>
@@ -46,6 +47,7 @@
         (click)="play()"
         [disabled]="state?.error"
         *ngIf="!state?.playing"
+        #playButton
       >
         <mat-icon mat-list-icon>play_circle_filled</mat-icon>
       </button>

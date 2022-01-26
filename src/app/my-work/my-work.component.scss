@@ -13,8 +13,16 @@
         }
       }
     }
-    &.professional-experience {
-      text-align: center;
+    &.catalog {
+      .card {
+        text-align: center;
+        .card-header {
+          flex-direction: column;
+        }
+        iframe {
+          width: 100%;
+        }
+      }
     }
   }
 }

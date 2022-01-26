@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Router } from '@angular/router';
 import gsap from 'gsap';
 import { AppStoreService } from '../services/app-store.service';
 @Component({
@@ -14,16 +15,24 @@ export class MyWorkComponent implements OnInit {
   @ViewChild('frontend', { static: true }) frontEnd: ElementRef<HTMLDivElement>;
   @ViewChild('backend', { static: true }) backend: ElementRef<HTMLDivElement>;
   @ViewChild('database', { static: true }) database: ElementRef<HTMLDivElement>;
-  @ViewChild('stackEndLine', { static: true })
-  stackEndLine: ElementRef<HTMLHRElement>;
   @ViewChild('professionalExperienceTitle', { static: true })
   professionalExperienceTitle: ElementRef<HTMLTitleElement>;
+  @ViewChild('professionalExperienceTitleLine', { static: true })
+  professionalExperienceTitleLine: ElementRef<HTMLHRElement>;
   @ViewChild('professionalExperienceP1', { static: true })
   professionalExperienceP1: ElementRef<HTMLParagraphElement>;
   @ViewChild('professionalExperienceP2', { static: true })
   professionalExperienceP2: ElementRef<HTMLParagraphElement>;
-
-  constructor(private appStoreService: AppStoreService) {}
+  @ViewChild('catalogTitle', { static: true })
+  catalogTitle: ElementRef<HTMLTitleElement>;
+  @ViewChild('catalogTitleLine', { static: true })
+  catalogTitleLine: ElementRef<HTMLHRElement>;
+  @ViewChild('marken', { static: true }) marken: ElementRef<HTMLDivElement>;
+  @ViewChild('dln', { static: true }) dln: ElementRef<HTMLDivElement>;
+  constructor(
+    private appStoreService: AppStoreService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     this.initAnimations();
@@ -36,7 +45,7 @@ export class MyWorkComponent implements OnInit {
     tl.from(
       [this.stackTitle.nativeElement, this.stackTitleLine.nativeElement],
       {
-        duration: 1,
+        duration: 0.5,
         opacity: 0,
       }
     )
@@ -56,17 +65,31 @@ export class MyWorkComponent implements OnInit {
       )
       .from(
         [
-          this.stackEndLine.nativeElement,
           this.professionalExperienceTitle.nativeElement,
+          this.professionalExperienceTitleLine.nativeElement,
           this.professionalExperienceP1.nativeElement,
           this.professionalExperienceP2.nativeElement,
         ],
         {
           opacity: 0,
           stagger: 0.25,
-          onComplete: () =>
-            (this.appStoreService.delayAnimationOnWelcomePage = 0),
         }
-      );
+      )
+      .from(
+        [this.catalogTitle.nativeElement, this.catalogTitleLine.nativeElement],
+        {
+          opacity: 0,
+          duration: 0.5,
+        }
+      )
+      .from([this.marken.nativeElement, this.dln.nativeElement], {
+        duration: 0.7,
+        y: -200,
+        x: -200,
+        opacity: 0,
+        stagger: 0.25,
+        onComplete: () =>
+          (this.appStoreService.delayAnimationOnWelcomePage = 0),
+      });
   }
 }

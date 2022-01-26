@@ -23,24 +23,21 @@ export class MusicPlayerComponent implements AfterViewInit {
       this.files = files;
     });
 
-    // listen to stream state
     this.audioService.getState().subscribe((state) => {
       this.state = state;
     });
   }
 
   ngAfterViewInit(): void {
-    // if (this.appStoreService.isFirstLoad) {
-    //   this.openFile(this.files[0], 0);
-    //   this.play();
-    //   this.appStoreService.isFirstLoad = false;
-    // }
+    if (this.appStoreService.isFirstLoad) {
+      this.openFile(this.files[0], 0);
+      this.play();
+      this.appStoreService.isFirstLoad = false;
+    }
   }
 
   playStream(url) {
-    this.audioService.playStream(url).subscribe((events) => {
-      // listening for fun here
-    });
+    this.audioService.playStream(url).subscribe();
   }
 
   openFile(file, index) {

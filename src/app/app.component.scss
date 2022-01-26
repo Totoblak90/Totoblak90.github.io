@@ -1,5 +1,8 @@
 .container {
   h3 {
+    a {
+      text-decoration: none;
+    }
     @media (max-width: 575px) {
       font-size: 15px;
     }

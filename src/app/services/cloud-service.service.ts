@@ -17,11 +17,6 @@ export class CloudServiceService {
       artist: 'Rolling Stones'
     },
     {
-      url: '../../assets/ed-sheeran-shape-of-you.mp3',
-      name: 'Shape of you',
-      artist: 'Ed Sheeran'
-    },
-    {
       url: 'https://ia801504.us.archive.org/3/items/EdSheeranPerfectOfficialMusicVideoListenVid.com/Ed_Sheeran_-_Perfect_Official_Music_Video%5BListenVid.com%5D.mp3',
       name: 'Perfect',
       artist: ' Ed Sheeran',

@@ -116,8 +116,7 @@ export class MyWorkComponent implements OnInit {
       )
       .from([this.marken.nativeElement, this.dln.nativeElement], {
         duration: 0.7,
-        y: -200,
-        x: -200,
+        y: 200,
         opacity: 0,
         stagger: 0.25,
         onComplete: () =>

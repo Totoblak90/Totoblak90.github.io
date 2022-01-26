@@ -30,11 +30,11 @@ export class MusicPlayerComponent implements AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    if (this.appStoreService.isFirstLoad) {
-      this.openFile(this.files[0], 0);
-      this.play();
-      this.appStoreService.isFirstLoad = false;
-    }
+    // if (this.appStoreService.isFirstLoad) {
+    //   this.openFile(this.files[0], 0);
+    //   this.play();
+    //   this.appStoreService.isFirstLoad = false;
+    // }
   }
 
   playStream(url) {

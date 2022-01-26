@@ -1,0 +1,27 @@
+.about-me-container {
+  h1 {
+    text-align: center;
+  }
+  .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &.family,
+    &.animals {
+      @media (max-width: 575px) {
+        flex-direction: column-reverse;
+      }
+    }
+    img {
+      width: 100%;
+    }
+
+    @media (max-width: 575px) {
+      text-align: center;
+    }
+  }
+
+  .music {
+    text-align: center;
+  }
+}

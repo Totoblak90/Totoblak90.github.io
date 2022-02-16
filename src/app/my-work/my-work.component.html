@@ -47,38 +47,20 @@
     <h2 #socialProfileTitle>Social profiles and CV</h2>
     <hr #socialProfileLine />
     <div #github class="col-md-6 col-lg-4 profile-container">
-      <img
-        src="assets/github.jpg"
-        alt="GitHub"
-        class="pointer"
-        (click)="githubLink.click()"
-      />
+      <img src="assets/github.jpg" alt="GitHub" class="pointer" (click)="githubLink.click()" />
       <p>
-        <a #githubLink href="https://github.com/Totoblak90" target="_blank"
-          >Check out my github profile</a
-        >
+        <a #githubLink href="https://github.com/Totoblak90" target="_blank">Check out my github profile</a>
       </p>
     </div>
     <div #linkedin class="col-md-6 col-lg-4 profile-container">
-      <img
-        src="assets/linkedin.png"
-        alt="LinkedIn"
-        class="pointer"
-        (click)="linkedinLink.click()"
-      />
+      <img src="assets/linkedin.png" alt="LinkedIn" class="pointer" (click)="linkedinLink.click()" />
       <p>
-        <a #linkedinLink href="https://www.linkedin.com/in/tobias-blaksley-5b883753/" target="_blank"
-          >Check out my linkedin profile</a
-        >
+        <a #linkedinLink href="https://www.linkedin.com/in/tobias-blaksley-5b883753/" target="_blank">Check out my
+          linkedin profile</a>
       </p>
     </div>
     <div #cv class="col-md-6 col-lg-4 profile-container">
-      <img
-        src="assets/cv.png"
-        alt="Curriculum Vitae"
-        class="pointer"
-        (click)="cvLink.click()"
-      />
+      <img src="assets/cv.png" alt="Curriculum Vitae" class="pointer" (click)="cvLink.click()" />
       <p>
         <a #cvLink href="assets/CV.pdf" download>Download my CV</a>
       </p>
@@ -100,19 +82,18 @@
     <h2 #catalogTitle>Catalog</h2>
     <hr #catalogTitleLine />
     <div #marken class="col-md-4">
-      <div class="card bgc-secondary">
-        <div class="card-header">
-          <p class="card-header-title">Marken drinks</p>
-          <p class="card-header-subtitle">Site still in construction</p>
+      <a href="https://markendrinks.com/" target="_blank">
+        <div class="card bgc-secondary">
+          <div class="card-header">
+            <p class="card-header-title">Marken drinks</p>
+            <p class="card-header-subtitle">Site still in construction</p>
+          </div>
+          <div class="card-body">
+            <iframe src="https://markendrinks.com/" frameborder="0" title="Marken drinks" webkitallowfullscreen
+              mozallowfullscreen allowfullscreen style="background-color: white"></iframe>
+          </div>
         </div>
-        <div class="card-body">
-          <iframe
-            src="https://markendrinks.com/"
-            frameborder="0"
-            title="Marken drinks"
-          ></iframe>
-        </div>
-      </div>
+      </a>
     </div>
     <div #dln class="col-md-4">
       <div class="card bgc-secondary">
@@ -121,13 +102,24 @@
           <p>Site still in construction</p>
         </div>
         <div class="card-body">
-          <iframe
-            src="https://lnconstrucciones.herokuapp.com/"
-            frameborder="0"
-            title="Marken drinks"
-          ></iframe>
+          <iframe src="https://lnconstrucciones.herokuapp.com/" frameborder="0" title="Marken drinks"
+            webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
         </div>
       </div>
+    </div>
+    <div #css class="col-md-4">
+      <a href="https://infallible-cray-447420.netlify.app/" target="_blank">
+        <div class="card bgc-secondary">
+          <div class="card-header">
+            <p>The power of CSS</p>
+            <p>HTML & CSS advanced course</p>
+          </div>
+          <div class="card-body">
+            <iframe src="https://infallible-cray-447420.netlify.app/" frameborder="0" title="Marken drinks"
+              webkitallowfullscreen mozallowfullscreen allowfullscreen style="background-color: white"></iframe>
+          </div>
+        </div>
+      </a>
     </div>
   </div>
 </div>

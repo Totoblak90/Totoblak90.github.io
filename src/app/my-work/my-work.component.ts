@@ -36,6 +36,8 @@ export class MyWorkComponent implements OnInit {
   catalogTitleLine: ElementRef<HTMLHRElement>;
   @ViewChild('marken', { static: true }) marken: ElementRef<HTMLDivElement>;
   @ViewChild('dln', { static: true }) dln: ElementRef<HTMLDivElement>;
+  @ViewChild('css', { static: true }) css: ElementRef<HTMLDivElement>;
+
   constructor(
     private appStoreService: AppStoreService,
     private router: Router
@@ -114,13 +116,20 @@ export class MyWorkComponent implements OnInit {
           duration: 0.5,
         }
       )
-      .from([this.marken.nativeElement, this.dln.nativeElement], {
-        duration: 0.7,
-        y: 200,
-        opacity: 0,
-        stagger: 0.25,
-        onComplete: () =>
-          (this.appStoreService.delayAnimationOnWelcomePage = 0),
-      });
+      .from(
+        [
+          this.marken.nativeElement,
+          this.dln.nativeElement,
+          this.css.nativeElement,
+        ],
+        {
+          duration: 0.7,
+          y: 200,
+          opacity: 0,
+          stagger: 0.25,
+          onComplete: () =>
+            (this.appStoreService.delayAnimationOnWelcomePage = 0),
+        }
+      );
   }
 }
